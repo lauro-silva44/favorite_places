@@ -32,7 +32,14 @@ class PlacesList extends StatelessWidget {
           placeList[index].title,
           style: Theme.of(context)
               .textTheme
-              .bodyMedium!
+              .titleMedium!
+              .copyWith(color: Theme.of(context).colorScheme.onBackground),
+        ),
+        subtitle: Text(
+          placeList[index].location.address,
+          style: Theme.of(context)
+              .textTheme
+              .bodySmall!
               .copyWith(color: Theme.of(context).colorScheme.onBackground),
         ),
         onTap: () => Navigator.push(
